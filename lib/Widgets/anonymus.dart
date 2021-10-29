@@ -89,9 +89,24 @@ class _InicialPageState extends State<InicialPage> {
             setState(() {
               selectedBarIndex = index;
             });
+            
           },
       ),
 
     );
   }
 }
+
+String getResult() 
+{
+    if (_bmi >= 25) 
+{
+      return 'High BMI';
+    } else if (_bmi > 18.5) 
+{
+      return 'Normal BMI';
+    } else 
+{
+      return 'Low BMI';
+    }
+  }
